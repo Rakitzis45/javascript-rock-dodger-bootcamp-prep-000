@@ -20,28 +20,16 @@ var gameInterval = null
 function checkCollision(rock) {
   const top = positionToInteger(rock.style.top)
 
-  // rocks are 20px high
-  // DODGER is 20px high
-  // GAME_HEIGHT - 20 - 20 = 360px;
   if (top > 360) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left)
     const dodgerRightEdge = dodgerLeftEdge + 40;
     const rockLeftEdge = positionToInteger(rock.style.left)
     const rockRightEdge = rockLeftEdge + 20;
 
-    if (false /**
-               * Think about it -- what's happening here?
-               * There's been a collision if one of three things is true:
-               * 1. The rock's left edge is < the DODGER's left edge,
-               *    and the rock's right edge is > the DODGER's left edge;
-               * 2. The rock's left edge is > the DODGER's left edge,
-               *    and the rock's right edge is < the DODGER's right edge;
-               * 3. The rock's left edge is < the DODGER's right edge,
-               *    and the rock's right edge is > the DODGER's right edge.
-               */) {
+    if (false) {}
                if (rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge||
                    rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerLeftEdge||
-                   rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge)
+                   rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge){
       return true
     }
   }
@@ -52,17 +40,9 @@ function createRock(x) {
 
   rock.className = 'rock'
   rock.style.left = `${x}px`
+  var top = rock.style.top = 0
 
-  // Hmmm, why would we have used `var` here?
-  var top = 0
-
-  rock.style.top = top
-
-  /**
-   * Now that we have a rock, we'll need to append
-   * it to GAME and move it downwards.
-   */
-
+GAME.appendChild(rock)
 
   /**
    * This function moves the rock. (2 pixels at a time
