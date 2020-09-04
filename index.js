@@ -119,24 +119,9 @@ function moveDodger(e) {
    * we've declared for you above.)
    * And be sure to use the functions declared below!
    */
-  if(e.which === LEFT_ARROW){
-    moveDodgerLeft()
-    e.stopPropagation()
-    e.preventDefault()
-  }
-  if else(e.which === RIGHT_ARROW){
-    moveDodgerRight()
-    e.stopPropagation()
-    e.preventDefault()
-  }
-}
+
 function moveDodgerLeft() {
-window.requestAnimationFrame(function() {
-  var left = positionToInteger(DODGER.style.left)
-  if (left > 0) {
-    DODGER.style.left = `$(left - 4)px`;
-  }
-});
+
   // implement me!
   /**
    * This function should move DODGER to the left
@@ -145,12 +130,7 @@ window.requestAnimationFrame(function() {
 
 }
 function moveDodgerRight() {
-  window.requestAnimationFrame(function(){
-    var right = positionToInteger(DODGER.style.right)
-    if(left < 360){
-      DODGER.style.left = `$(left + 4)px`
-    }
-  });
+
   // implement me!
   /**
    * This function should move DODGER to the right
@@ -158,8 +138,6 @@ function moveDodgerRight() {
    */
 
    }
-
-
 /**
  * @param {string} p The position property
  * @returns {number} The position as an integer (without 'px')
