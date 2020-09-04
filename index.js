@@ -123,15 +123,6 @@ function moveDodger(e) {
   }
 }
 
-  // implement me!
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
-}
 function moveDodgerLeft() {
   function moveDodgerLeft() {
   window.requestAnimationFrame(function() {
@@ -140,13 +131,6 @@ function moveDodgerLeft() {
       DODGER.style.left = `$(left - 4)px`;
     }
   });
-
-  // implement me!
-  /**
-   * This function should move DODGER to the left
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
-
 }
 function moveDodgerRight() {
     window.requestAnimationFrame(function(){
@@ -155,13 +139,6 @@ function moveDodgerRight() {
         DODGER.style.left = `$(left + 4)px`
       }
     });
-
-  // implement me!
-  /**
-   * This function should move DODGER to the right
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
-
    }
 /**
  * @param {string} p The position property
@@ -172,7 +149,7 @@ function positionToInteger(p) {
 }
 
 function start() {
-  window.addEventListener('keydown', moveDodger())
+  window.addEventListener('keydown', moveDodger)
 
   START.style.display = 'none'
 
