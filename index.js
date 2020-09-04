@@ -111,6 +111,18 @@ function endGame() {
 }
 
 function moveDodger(e) {
+  if(e.which === LEFT_ARROW){
+    moveDodgerLeft()
+    e.stopPropagation()
+    e.preventDefault()
+  }
+  if else(e.which === RIGHT_ARROW){
+    moveDodgerRight()
+    e.stopPropagation()
+    e.preventDefault()
+  }
+}
+
   // implement me!
   /**
    * This function should call `moveDodgerLeft()`
@@ -121,6 +133,13 @@ function moveDodger(e) {
    */
 }
 function moveDodgerLeft() {
+  function moveDodgerLeft() {
+  window.requestAnimationFrame(function() {
+    var left = positionToInteger(DODGER.style.left)
+    if (left > 0) {
+      DODGER.style.left = `$(left - 4)px`;
+    }
+  });
 
   // implement me!
   /**
@@ -130,6 +149,12 @@ function moveDodgerLeft() {
 
 }
 function moveDodgerRight() {
+    window.requestAnimationFrame(function(){
+      var right = positionToInteger(DODGER.style.right)
+      if(left < 360){
+        DODGER.style.left = `$(left + 4)px`
+      }
+    });
 
   // implement me!
   /**
