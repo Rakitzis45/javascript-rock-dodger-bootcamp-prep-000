@@ -51,8 +51,8 @@ GAME.appendChild(rock)
   function moveRock() {
     rock.style.top = `${top += 2}px`;
 
-    if( checkCollision(rock)){
-      return endGame
+    if( checkCollision(rock)) {
+      return endGame()
     } if (top < GAME_HEIGHT){
       window.requestAnimationFrame(moveRock)
     } else {
