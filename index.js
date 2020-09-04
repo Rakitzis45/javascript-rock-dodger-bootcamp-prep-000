@@ -139,7 +139,7 @@ function moveDodgerLeft() {
     if(left > 0){
       dodger.style.left = `$(left - 4)px`
     }
-  }
+  })
   // implement me!
   /**
    * This function should move DODGER to the left
@@ -158,7 +158,7 @@ function moveDodgerRight() {
        if(right < 360){
          dodger.style.left = `$(left + 4)px`
        }
-     }
+     })
    }
 
 
