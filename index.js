@@ -129,16 +129,16 @@ function moveDodgerLeft() {
     var left = positionToInteger(DODGER.style.left)
     if (left > 0) {
       DODGER.style.left = `$(left - 4)px`;
-    }
-  });
+    })
+  };
 }
 function moveDodgerRight() {
     window.requestAnimationFrame(function(){
       var right = positionToInteger(DODGER.style.right)
       if(left < 360){
         DODGER.style.left = `$(left + 4)px`
-      }
-    });
+      })
+    };
    }
 /**
  * @param {string} p The position property
