@@ -49,7 +49,8 @@ GAME.appendChild(rock)
    * seems like a good pace.)
    */
   function moveRock() {
-    rock.style.top = `$(top += 2)px`;
+    rock.style.top = `${top += 2}px`;
+    
     if( checkCollision(rock)){
       return endGame
     } if (top < GAME_HEIGHT){
@@ -89,7 +90,7 @@ function moveDodgerLeft() {
   window.requestAnimationFrame(function() {
     var left = positionToInteger(DODGER.style.left)
     if (left > 0) {
-      DODGER.style.left = `$(left - 4)px`;
+      DODGER.style.left = `${left - 4}px`;
     }
   });
 }
@@ -97,7 +98,7 @@ function moveDodgerRight() {
     window.requestAnimationFrame(function(){
       var right = positionToInteger(DODGER.style.right)
       if(left < 360){
-        DODGER.style.left = `$(left + 4)px`
+        DODGER.style.left = `${left + 4}px`
       }
     });
    }
