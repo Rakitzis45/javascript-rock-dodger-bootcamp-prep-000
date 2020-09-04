@@ -79,7 +79,12 @@ function endGame() {
 }
 
 function moveDodger(e) {
-
+if (e.which === LEFT_ARROW){
+  window.requestAnimationFrame(moveDodgerLeft);
+  e.preventDefault();
+  e.stopPropagation();
+  return moveDodgerLeft();
+}
 
 }
 
