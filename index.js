@@ -119,11 +119,7 @@ function moveDodger(e) {
    * we've declared for you above.)
    * And be sure to use the functions declared below!
    */
-   document.addEventListener('keydown', function(e){
-     if(e.which=== 37){
-       moveDodgerLeft()
-     }
-   })
+
 }
 
 function moveDodgerLeft() {
@@ -132,13 +128,7 @@ function moveDodgerLeft() {
    * This function should move DODGER to the left
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
-   document.addEventListener("keydown", function(e){
-     if(e.which === 37){
-       var leftNumbers = parseInt(leftNumbers, 10)
-     } if (left > 0){
-       dodger.style.left = `$(left - 4)px`
-     }
-   })
+   
 }
 function moveDodgerRight() {
   // implement me!
