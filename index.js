@@ -136,7 +136,7 @@ window.requestAnimationFrame(function() {
   if (left > 0) {
     DODGER.style.left = `$(left - 4)px`;
   }
-})
+});
   // implement me!
   /**
    * This function should move DODGER to the left
@@ -150,7 +150,7 @@ function moveDodgerRight() {
     if(left < 360){
       DODGER.style.left = `$(left + 4)px`
     }
-  })
+  });
   // implement me!
   /**
    * This function should move DODGER to the right
