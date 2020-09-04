@@ -135,7 +135,6 @@ function moveDodgerLeft() {
      }
    })
 }
-}
 function moveDodgerRight() {
   // implement me!
   /**
